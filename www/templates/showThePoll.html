@@ -1,0 +1,16 @@
+<ion-slide-box style="height: 100%" on-slide-changed="onSwipeRight($index)">
+
+    <ion-slide  ng-repeat="i in pollImages">
+        <img src={{i.imgFilePath}} on-tap="vote()"  style="height: 100%; width: 100%">
+        <p>{{i.imgCaption}}</p>
+    </ion-slide>
+
+    <ion-slide>
+    <p>Here's where we'll display the data</p>
+    <canvas id="pie" class="chart chart-pie" data="data"
+  labels="labels"></canvas> 
+    </ion-slide>
+
+
+</ion-slide-box>
+

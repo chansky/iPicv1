@@ -1,0 +1,18 @@
+<!-- <link href="css/TimeCircles.css" rel="stylesheet">  
+<script type="text/javascript" src="js/TimeCircles.js"></script>   -->
+<!--<view title="'iPic'" class="pollbg" on-swipe-left="onSwipeLeft()">  -->
+  <content class="padding" has-header="true" has-subheader="true" style="text-align:center" on-swipe-left="onSwipeLeft()">
+
+      <div data-role="header">
+                   <h1>Feed</h1>
+      </div>
+      <div class="example" data-timer="900"></div>
+      <button class="button button-positive button-block" id="refresh" ng-click="refresh()" padding="true"> Refresh!</button>
+      <div class="opt">
+      <ion-item ng-repeat="obj in feedData"  padding="true">
+          <a class="item item-icon-left" ng-click="enterDisplayView(obj.pid)">
+            <p>{{ obj.username }}  has a poll that ends in:  {{obj.timeRemaining}}   seconds </p>
+          </a>
+      </ion-item>
+      </div>
+  </content>

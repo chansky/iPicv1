@@ -1,0 +1,22 @@
+  <div class="modal" style="opacity:1.0;  position: absolute; top: 30%; text-align:center; height: 80%;">
+  	<ion-content>
+<li class="item item-checkbox opt">
+     <label class="checkbox">
+       <input type="checkbox" name="checkbox-1" id="INSTABOX" ng-model="INSTABOX" style="text-align:right">
+     </label>
+     Instant Poll?
+  </li>
+  <div class="list opt">
+    <label class="item item-input item-select">
+      <div class="input-label">
+        End the Poll In...
+      </div>
+      <select ng-model="mytimeOptions" ng-options="t.time for t in timeOptions">
+      <option value="">-- choose time --</option>
+      </select>
+    <br>
+    </label>
+  </div>
+  <button class="button button-positive" ng-click="closeModal(INSTABOX, mytimeOptions.time)">Close</button>
+    </ion-content>
+</div>

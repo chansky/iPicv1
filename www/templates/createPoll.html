@@ -1,0 +1,39 @@
+<ion-slide-box style="height: 100%" on-slide-changed="checkForNewCaputre($index)" active-slide="myActiveSlide">
+
+    <ion-slide  ng-repeat="i in imagesForSlideBox">
+        <img src={{i.imgFilePath}} on-tap="modalTextEntry()"  style="height: 100%; width: 100%">
+        <p style="background-color:white; color:black; z-index:100;
+    position:absolute;
+    font-size:24px;
+    font-weight:bold;
+    left:20px;
+    top:50%;">{{i.imgCaption}}</p>
+        <button class="button button-clear" style= "position: absolute; top: 0;left: 0; background: transparent; min-height:50px; max-width:50px" ng-click="remove(imagesForSlideBox, $index)">
+            <img src="img/cameraoverlay/deleteButtonWhite.png" style="background: transparent; max-width:100%;
+max-height:100%;">
+        </button>
+        <button class="button button-clear" style= "position: absolute; top: 0;right: 0; background: transparent; min-height:50px; max-width:50px" ng-click="goToSendToPage()">
+            <img src="img/cameraoverlay/sendButton.png" style="background: transparent; max-width:100%;
+max-height:100%;">
+        </button>                   
+        <button class="button button-clear" style= "position: absolute; top: 0; margin-left: auto;
+    margin-right: auto; background: transparent; min-height:50px; max-width:50px" ng-click="openModal()">
+            <img src="img/cameraoverlay/clock.png" style="background: transparent; max-width:100%;
+max-height:100%;">
+        </button>
+        <button class="button button-clear" style= "position: absolute; bottom: 0;left: 0; background: transparent; min-height:50px; max-width:50px"  ng-click="goToFeedScreen()" >
+            <img src="img/cameraoverlay/border_bottom_left.png" style="background: transparent; max-width:100%;
+max-height:100%;">
+        </button>
+        <button class="button button-clear" style= "position: absolute; bottom: 0;right: 0; background: transparent; min-height:50px; max-width:50px" ng-click="goToSettingsPage()">
+            <img src="img/cameraoverlay/border_bottom_right.png" style="background: transparent; max-width:100%;
+max-height:100%;">
+        </button>
+    </ion-slide>
+
+    <!--The last slide (furthest to the right) should always be the image caputre screen  -->
+    <ion-slide>
+    </ion-slide>
+
+
+</ion-slide-box>
